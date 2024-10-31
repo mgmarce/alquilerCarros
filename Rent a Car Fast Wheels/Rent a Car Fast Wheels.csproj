@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2F0B4E0F-8673-4500-9E42-E8B1C4FB4F55}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rent_a_Car_Fast_Wheels</RootNamespace>
+    <AssemblyName>Rent a Car Fast Wheels</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publicar\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administrador\FrmAutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\FrmAutos.Designer.cs">
+      <DependentUpon>FrmAutos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\FrmClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\FrmClientes.Designer.cs">
+      <DependentUpon>FrmClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\FrmDevolucion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\FrmDevolucion.Designer.cs">
+      <DependentUpon>FrmDevolucion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\FrmEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\FrmEmpleados.Designer.cs">
+      <DependentUpon>FrmEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\FrmMantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\FrmMantenimiento.Designer.cs">
+      <DependentUpon>FrmMantenimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\FrmNuevoAlquiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\FrmNuevoAlquiler.Designer.cs">
+      <DependentUpon>FrmNuevoAlquiler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\Inicio.Designer.cs">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\MenuAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\MenuAdmin.Designer.cs">
+      <DependentUpon>MenuAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Reportes\DataSetAlquiler.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetAlquiler.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Reportes\DataSetAutos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetAutos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Reportes\DataSetClientes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetClientes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Reportes\DataSetDevolucion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetDevolucion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Reportes\DataSetEmpleados.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetEmpleados.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Reportes\DataSetMant.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetMant.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Reportes\Ficha.cs" />
+    <Compile Include="Administrador\Reportes\FichaAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\Reportes\FichaAuto.Designer.cs">
+      <DependentUpon>FichaAuto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Reportes\ReporteAlquilerAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\Reportes\ReporteAlquilerAdmin.Designer.cs">
+      <DependentUpon>ReporteAlquilerAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Reportes\ReporteautosAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\Reportes\ReporteautosAdmin.Designer.cs">
+      <DependentUpon>ReporteautosAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Reportes\ReporteClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\Reportes\ReporteClientes.Designer.cs">
+      <DependentUpon>ReporteClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Reportes\ReporteDevolucionAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\Reportes\ReporteDevolucionAdmin.Designer.cs">
+      <DependentUpon>ReporteDevolucionAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Reportes\ReporteEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\Reportes\ReporteEmpleados.Designer.cs">
+      <DependentUpon>ReporteEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\Reportes\ReporteMantFecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\Reportes\ReporteMantFecha.Designer.cs">
+      <DependentUpon>ReporteMantFecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empleado\FrmAutosEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleado\FrmAutosEmpleado.Designer.cs">
+      <DependentUpon>FrmAutosEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empleado\FrmClientesEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleado\FrmClientesEmpleado.Designer.cs">
+      <DependentUpon>FrmClientesEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empleado\FrmDevolucionEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleado\FrmDevolucionEmpleado.Designer.cs">
+      <DependentUpon>FrmDevolucionEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empleado\FrmInicioEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleado\FrmInicioEmpleado.Designer.cs">
+      <DependentUpon>FrmInicioEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empleado\FrmMantenimientoEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleado\FrmMantenimientoEmpleado.Designer.cs">
+      <DependentUpon>FrmMantenimientoEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empleado\FrmNuevoAlquilerEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleado\FrmNuevoAlquilerEmpleado.Designer.cs">
+      <DependentUpon>FrmNuevoAlquilerEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empleado\MenuEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleado\MenuEmpleado.Designer.cs">
+      <DependentUpon>MenuEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empleado\ReportesEmpleado\DataSetAutosEmpleado.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetAutosEmpleado.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Empleado\ReportesEmpleado\DataSetClientesEmpleado.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetClientesEmpleado.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Empleado\ReportesEmpleado\DataSetMant.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetMant.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Empleado\ReportesEmpleado\DatosAlquiler.cs" />
+    <Compile Include="Empleado\ReportesEmpleado\DatosDevolucion.cs" />
+    <Compile Include="Empleado\ReportesEmpleado\ReporteAlquiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleado\ReportesEmpleado\ReporteAlquiler.Designer.cs">
+      <DependentUpon>ReporteAlquiler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empleado\ReportesEmpleado\ReporteAutoEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleado\ReportesEmpleado\ReporteAutoEmpleado.Designer.cs">
+      <DependentUpon>ReporteAutoEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empleado\ReportesEmpleado\ReporteClientesEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleado\ReportesEmpleado\ReporteClientesEmpleado.Designer.cs">
+      <DependentUpon>ReporteClientesEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empleado\ReportesEmpleado\ReporteDevolucion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleado\ReportesEmpleado\ReporteDevolucion.Designer.cs">
+      <DependentUpon>ReporteDevolucion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empleado\ReportesEmpleado\ReporteMantFecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleado\ReportesEmpleado\ReporteMantFecha.Designer.cs">
+      <DependentUpon>ReporteMantFecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Administrador\FrmAutos.resx">
+      <DependentUpon>FrmAutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\FrmClientes.resx">
+      <DependentUpon>FrmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\FrmDevolucion.resx">
+      <DependentUpon>FrmDevolucion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\FrmEmpleados.resx">
+      <DependentUpon>FrmEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\FrmMantenimiento.resx">
+      <DependentUpon>FrmMantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\FrmNuevoAlquiler.resx">
+      <DependentUpon>FrmNuevoAlquiler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\Inicio.resx">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\MenuAdmin.resx">
+      <DependentUpon>MenuAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\Reportes\FichaAuto.rdlc" />
+    <EmbeddedResource Include="Administrador\Reportes\FichaAuto.resx">
+      <DependentUpon>FichaAuto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\Reportes\ReporteAlquiler.rdlc" />
+    <EmbeddedResource Include="Administrador\Reportes\ReporteAlquilerAdmin.resx">
+      <DependentUpon>ReporteAlquilerAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\Reportes\ReporteAutosAdmin.rdlc" />
+    <EmbeddedResource Include="Administrador\Reportes\ReporteautosAdmin.resx">
+      <DependentUpon>ReporteautosAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\Reportes\ReporteClientes.rdlc" />
+    <EmbeddedResource Include="Administrador\Reportes\ReporteClientes.resx">
+      <DependentUpon>ReporteClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\Reportes\ReporteDevolucion.rdlc" />
+    <EmbeddedResource Include="Administrador\Reportes\ReporteDevolucionAdmin.resx">
+      <DependentUpon>ReporteDevolucionAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\Reportes\ReporteEmpleados.rdlc" />
+    <EmbeddedResource Include="Administrador\Reportes\ReporteEmpleados.resx">
+      <DependentUpon>ReporteEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\Reportes\ReporteMantenimiento_Fecha.rdlc" />
+    <EmbeddedResource Include="Administrador\Reportes\ReporteMantFecha.resx">
+      <DependentUpon>ReporteMantFecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empleado\FrmAutosEmpleado.resx">
+      <DependentUpon>FrmAutosEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empleado\FrmClientesEmpleado.resx">
+      <DependentUpon>FrmClientesEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empleado\FrmDevolucionEmpleado.resx">
+      <DependentUpon>FrmDevolucionEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empleado\FrmInicioEmpleado.resx">
+      <DependentUpon>FrmInicioEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empleado\FrmMantenimientoEmpleado.resx">
+      <DependentUpon>FrmMantenimientoEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empleado\FrmNuevoAlquilerEmpleado.resx">
+      <DependentUpon>FrmNuevoAlquilerEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empleado\MenuEmpleado.resx">
+      <DependentUpon>MenuEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empleado\ReportesEmpleado\ReportAutosEmpleado.rdlc" />
+    <EmbeddedResource Include="Empleado\ReportesEmpleado\ReporteAlquiler.rdlc" />
+    <EmbeddedResource Include="Empleado\ReportesEmpleado\ReporteAlquiler.resx">
+      <DependentUpon>ReporteAlquiler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empleado\ReportesEmpleado\ReporteAutoEmpleado.resx">
+      <DependentUpon>ReporteAutoEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empleado\ReportesEmpleado\ReporteClientesEmpleado.rdlc" />
+    <EmbeddedResource Include="Empleado\ReportesEmpleado\ReporteClientesEmpleado.resx">
+      <DependentUpon>ReporteClientesEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empleado\ReportesEmpleado\ReporteDevolucion.rdlc" />
+    <EmbeddedResource Include="Empleado\ReportesEmpleado\ReporteDevolucion.resx">
+      <DependentUpon>ReporteDevolucion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empleado\ReportesEmpleado\ReporteMantenimiento_Fecha.rdlc" />
+    <EmbeddedResource Include="Empleado\ReportesEmpleado\ReporteMantFecha.resx">
+      <DependentUpon>ReporteMantFecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Administrador\Reportes\DataSetAlquiler.xsc">
+      <DependentUpon>DataSetAlquiler.xsd</DependentUpon>
+    </None>
+    <None Include="Administrador\Reportes\DataSetAlquiler.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetAlquiler.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Administrador\Reportes\DataSetAlquiler.xss">
+      <DependentUpon>DataSetAlquiler.xsd</DependentUpon>
+    </None>
+    <None Include="Administrador\Reportes\DataSetAutos.xsc">
+      <DependentUpon>DataSetAutos.xsd</DependentUpon>
+    </None>
+    <None Include="Administrador\Reportes\DataSetAutos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetAutos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Administrador\Reportes\DataSetAutos.xss">
+      <DependentUpon>DataSetAutos.xsd</DependentUpon>
+    </None>
+    <None Include="Administrador\Reportes\DataSetClientes.xsc">
+      <DependentUpon>DataSetClientes.xsd</DependentUpon>
+    </None>
+    <None Include="Administrador\Reportes\DataSetClientes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetClientes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Administrador\Reportes\DataSetClientes.xss">
+      <DependentUpon>DataSetClientes.xsd</DependentUpon>
+    </None>
+    <None Include="Administrador\Reportes\DataSetDevolucion.xsc">
+      <DependentUpon>DataSetDevolucion.xsd</DependentUpon>
+    </None>
+    <None Include="Administrador\Reportes\DataSetDevolucion.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetDevolucion.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Administrador\Reportes\DataSetDevolucion.xss">
+      <DependentUpon>DataSetDevolucion.xsd</DependentUpon>
+    </None>
+    <None Include="Administrador\Reportes\DataSetEmpleados.xsc">
+      <DependentUpon>DataSetEmpleados.xsd</DependentUpon>
+    </None>
+    <None Include="Administrador\Reportes\DataSetEmpleados.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetEmpleados.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Administrador\Reportes\DataSetEmpleados.xss">
+      <DependentUpon>DataSetEmpleados.xsd</DependentUpon>
+    </None>
+    <None Include="Administrador\Reportes\DataSetMant.xsc">
+      <DependentUpon>DataSetMant.xsd</DependentUpon>
+    </None>
+    <None Include="Administrador\Reportes\DataSetMant.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetMant.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Administrador\Reportes\DataSetMant.xss">
+      <DependentUpon>DataSetMant.xsd</DependentUpon>
+    </None>
+    <None Include="Empleado\ReportesEmpleado\DataSetAutosEmpleado.xsc">
+      <DependentUpon>DataSetAutosEmpleado.xsd</DependentUpon>
+    </None>
+    <None Include="Empleado\ReportesEmpleado\DataSetAutosEmpleado.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetAutosEmpleado.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Empleado\ReportesEmpleado\DataSetAutosEmpleado.xss">
+      <DependentUpon>DataSetAutosEmpleado.xsd</DependentUpon>
+    </None>
+    <None Include="Empleado\ReportesEmpleado\DataSetClientesEmpleado.xsc">
+      <DependentUpon>DataSetClientesEmpleado.xsd</DependentUpon>
+    </None>
+    <None Include="Empleado\ReportesEmpleado\DataSetClientesEmpleado.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetClientesEmpleado.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Empleado\ReportesEmpleado\DataSetClientesEmpleado.xss">
+      <DependentUpon>DataSetClientesEmpleado.xsd</DependentUpon>
+    </None>
+    <None Include="Empleado\ReportesEmpleado\DataSetMant.xsc">
+      <DependentUpon>DataSetMant.xsd</DependentUpon>
+    </None>
+    <None Include="Empleado\ReportesEmpleado\DataSetMant.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetMant.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Empleado\ReportesEmpleado\DataSetMant.xss">
+      <DependentUpon>DataSetMant.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\Rent_a_Car_Fast_Wheels.Administrador.Reportes.Ficha.datasource" />
+    <None Include="Properties\DataSources\Rent_a_Car_Fast_Wheels.Empleado.ReportesEmpleado.DatosAlquiler.datasource" />
+    <None Include="Properties\DataSources\Rent_a_Car_Fast_Wheels.Empleado.ReportesEmpleado.DatosDevolucion.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
