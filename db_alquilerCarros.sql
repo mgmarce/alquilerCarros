@@ -87,7 +87,7 @@ total decimal(10,2) not null, ---TOTAL DE LOS DIAS POR EL PRECIO POR DIA
 depositoSeguro decimal(10,2) not null, --cobro de seguro
 totalGlobal decimal(10,2) not null,--TOTAL GLOBAL DEL TOTAL ANTERIOR MAS EL COSTO SEGURO
 codempleado int constraint fk_codempleado foreign key references empleados(codempleado), 
-modo varchar(20) default 'Activo', --CUANDO SE EMITA EL DE DEVOLUCION SER� INACTIVO
+modo varchar(20) default 'Activo', --CUANDO SE EMITA EL DE DEVOLUCION SER INACTIVO
 constraint pk_codentrealquiler  primary key(codentrealquiler)
 );
 go
@@ -110,11 +110,11 @@ diasalquilado int not null,--EL TOTAL DE DIAS QUE EL CLIENTE IBA A TENER EL CARR
 diaentrada date not null,--EL DIA EN SI QUE EL CARRO SE FUE ENTREGADO POR EL CLIENTE
 ttlDiasAlquilados int not null, --LA CUENTA DE LOS DIAS QUE EL CLIENTE LO TUVO, YA SEA SI LO ENTREGO TARDE O NO
 precio decimal(10,2) not null,--PRECIO POR DIA A PAGAR DE PARTE DEL CIENTE(DE TABLA ALQUILER)
-mora decimal(10,2) null,--ES UN COSTO EXTRA PARA EL CLIENTE SI SE TARDO EN ENTREGARLO, AC� SE DETALLERA
+mora decimal(10,2) null,--ES UN COSTO EXTRA PARA EL CLIENTE SI SE TARDO EN ENTREGARLO, ACA SE DETALLERA
 depositoSeguro decimal(10,2) not null,--(DE TABLA ALQUILER)
-costodano decimal(10,2)null,--SI EL CLIENTE HIZO UN RASGU�O O ALGO AL CARRO, SE LE DESCUENTA DEL SEGURO
+costodano decimal(10,2)null,--SI EL CLIENTE HIZO UN RASGUNO O ALGO AL CARRO, SE LE DESCUENTA DEL SEGURO
 devloseguro decimal(10,2)null,--PERO SI NO, SE LE DEVUELVE LO QUE SE LE DESCUENTA O COMPLETO, DEPENDE
-pagoExtraDano decimal(10,2) null,--PERO SI EL SEGURO DEL CLIENTE NO ES SUFICIENTE PARA CUBRIR POR EL DA�O, SE LE COBRA LO QUE FALTA AL QUITARLE LO DEL SEGURO
+pagoExtraDano decimal(10,2) null,--PERO SI EL SEGURO DEL CLIENTE NO ES SUFICIENTE PARA CUBRIR POR EL DANO, SE LE COBRA LO QUE FALTA AL QUITARLE LO DEL SEGURO
 totalPagar decimal(10,2) null,--PUEDA QUE SE SUME LO DE LA MORA Y LO DEL PAGO EXTRA PERO ESTO SUCEDERA EN ALGUNOS CASOS
 observacion varchar(100),
 estado varchar(20) default 'disponible',
@@ -273,8 +273,8 @@ create procedure ListarClientes
 as
 begin 
 select codcliente as 'Codigo', nombrec as 'Nombre', apellidoc as 'Apellidos', DUI as
-'DUI', numlicencia as 'Numero de Licencia', tipolicencia as 'Tipo de Licencia', fechavenci as 'Fecha de Vencimiento', genero as 'G�nero',
-tel 'T�lefono', correo as 'Correo'
+'DUI', numlicencia as 'Numero de Licencia', tipolicencia as 'Tipo de Licencia', fechavenci as 'Fecha de Vencimiento', genero as 'Genero',
+tel 'Telefono', correo as 'Correo'
 from clientes
 end
 
@@ -472,7 +472,7 @@ create procedure ListarAlquileres
 as
 begin 
 select codentrealquiler as 'ID', codempleado as 'Cod. empleado',codcliente as 'Codigo Cliente', nombrec as 'Nombre', apellidoc as 'Apellido',
-DUI as 'DUI',numlicencia as 'N� Licencia',codigoauto as 'Codigo Auto', 
+DUI as 'DUI',numlicencia as 'No Licencia',codigoauto as 'Codigo Auto', 
 tipoauto as 'Tipo auto',marca as 'Marca', modelo as 'Modelo', placa as 'Placa', diaretiro as 'Fecha Retiro', 
 diaentrada as 'Fecha entrada', diasalquilado as 'Dias por alquilar', precio as 'Precio por dia', total as 'Total por los dias',
 depositoSeguro as 'Deposito Seguro', totalGlobal as 'Total Global', modo as 'Modo' from alquiler where estado='disponible'
@@ -529,7 +529,7 @@ begin
 select codevoalquiler as 'ID devolucion', codentrealquiler as 'Id alquiler', nombrec as 'Nombres', apellidoc as 'Apellidos',
 DUI as 'DUI', numlicencia AS 'Licencia', tipoauto as 'Tipo Auto', marca as 'Marca', modelo as 'Modelo', placa as 'Placa', diasalida as 'Fecha Salida', 
 diaentrega as 'Fecha Entrega', diasalquilado as 'Dias alquilados', diaentrada as 'Fecha entrada', ttlDiasAlquilados as 'Total dias retraso', 
-precio as 'Precio', mora as 'Mora', depositoSeguro as 'Deposito Seguro', costodano as 'Costo Da�o', devloseguro as 'Devolucion seguro',
+precio as 'Precio', mora as 'Mora', depositoSeguro as 'Deposito Seguro', costodano as 'Costo Dano', devloseguro as 'Devolucion seguro',
 pagoExtraDano as 'Pagos Extras', totalpagar 'Total de pagos', observacion as 'Observacion'
 from devolucion where estado = 'disponible'
 end
