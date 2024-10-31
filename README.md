@@ -30,7 +30,7 @@ SQL Server (version 2016 or higher)
 git clone https://github.com/mgmarce/alquilerCarros.git
 ```
 2. Open the project in Visual Studio.
-3. Confirm that you have downloaded and executed the database. 
+3. Confirm that you have downloaded and executed the database. _[(download database)](https://github.com/mgmarce/alquilerCarros/blob/main/db_alquilerCarros.sql)_
 4. Make sure to restore required references and settings.
 5. Run the application from Visual Studio.
 
